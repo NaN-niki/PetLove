@@ -1,0 +1,16 @@
+.footer{
+    background-color: rgb(34, 53, 34);
+    padding: 3em 2em 2em 2em;
+    color: rgb(252, 232, 208);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.logo{
+  width: 2em;
+}
+
+.logos{
+    display: flex;
+    gap: 2em;
+}

@@ -15,15 +15,13 @@ async function getOnePet(petId) {
 async function editPet(petId, pet) {
     const editetPet = await Pet.findById(petId)
 
-    editetPet.type = pet.type
-    editetPet.brand = pet.brand
-    editetPet.price = pet.price
-    editetPet.sizeClothing = pet.sizeClothing
-    editetPet.color = pet.color
+    editetPet.breed = pet.breed
+    editetPet.name = pet.name
+    editetPet.skin_color = pet.skin_color
+    editetPet.imageUrl = pet.imageUrl
     editetPet.description = pet.description
     editetPet.contactInfo = pet.contactInfo
     editetPet.adress = pet.adress
-    editetPet.imageUrl = pet.imageUrl
 
     return editetPet.save()
 }

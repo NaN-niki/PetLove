@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogComponent } from './catalog/catalog.component';
+import { PetsRoutingModule } from './pets-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -9,7 +11,8 @@ import { CatalogComponent } from './catalog/catalog.component';
     CatalogComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PetsRoutingModule
   ],
   exports: [
     CatalogComponent

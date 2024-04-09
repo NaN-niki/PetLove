@@ -3,6 +3,7 @@ const { model, Schema, Types } = require('mongoose')
 const httpRegex = /https?:\/\/.*/
 
 const petSchema = new Schema({
+    animalType : {type : String, required: true},
     breed: { type: String, required: true},
     name: { type: String, required: true },
     //price: { type: Number, required: true, min: [0.1, 'The clothing must be with price above 0'], max: [1000, 'The clothing must be with price under 1000'] },

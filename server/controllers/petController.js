@@ -7,7 +7,7 @@ const { getAllPets,
     deletePet,
     getPetByUser,
     getPet } = require('../services/petService')
-const parseError = require('../util/parserError')
+const parseError = require('../util/parseError')
 
 const petController = require('express').Router()
 
@@ -28,6 +28,7 @@ petController.post('/create', hasUser(), async (req, res) => {
         const body = req.body
 
         const item = {  
+            animalType : body.animalType,
             breed: body.breed,
             name: body.name,
             skin_color: body.skin_color,

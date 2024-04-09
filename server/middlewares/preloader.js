@@ -1,14 +1,14 @@
-const { getClothing, getAllClothes } = require("../services/clothesService")
+const { getAllPets, getOnePet } = require('../services/petService')
 
 
 module.exports = () => async (req, res, next) => {
 
     if (req.params.id) {
-        const data = await getClothing(req.params.id)
-        req.clothing = data
+        const data = await getOnePet(req.params.id)
+        req.pet = data
     } else {
-        const data = await getAllClothes()
-        req.clothes = data
+        const data = await getAllPets()
+        req.pets = data
     }
 
     next()

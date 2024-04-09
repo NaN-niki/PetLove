@@ -19,7 +19,7 @@ function isGuest() {
 
 function isOwner() {
     return (req, res, next) => {
-        if ((req.user._id).toString() !== (req.clothing.owner).toString()) {
+        if ((req.user._id).toString() !== (req.pet.owner).toString()) {
             return res.status(400).json({ message: 'You are not the owner' })
         }
         next()

@@ -1,5 +1,6 @@
 export interface IPet{
     _id: string,
+    animalType: string,
     breed: string,
     name: string,
     skin_color : string,

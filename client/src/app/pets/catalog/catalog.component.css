@@ -1,0 +1,50 @@
+.content-container{
+    margin : 5em 6em
+}
+.card-container{
+    display: flex;
+    gap: 5em;
+}
+
+.card{
+    padding: 2em;
+    width: 50em;
+    height: 22em;
+    background-color: rgb(19, 165, 117);
+    display: flex;
+    flex-direction: row;
+    
+    gap: 2em;
+}
+
+.container-left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.definition{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.definition-left{
+    font-weight: 500;
+}
+
+#img-container{
+    max-width: 10em;
+    max-height: 20em;
+}
+
+#img-container img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.container-right:hover{
+    width: 30em;
+    height: 25em;
+}

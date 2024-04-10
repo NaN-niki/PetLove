@@ -1,0 +1,43 @@
+.content-container{
+    min-height : 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    margin-top: 5em;
+    margin-bottom: 10em;
+    background-color: antiquewhite;
+    padding: 2em 8em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 20px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.fileds input{
+    width: 50%;
+}
+
+.heading{
+    text-align: center;
+}
+
+#link{
+    font-weight: 500;
+    font-size: larger;
+    font-style: none;
+    color: black;
+}
+
+#link:hover{
+    color: rgb(216, 216, 140);;
+    font-style: none;
+    text-decoration: none;
+}

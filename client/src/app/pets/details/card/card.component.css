@@ -1,0 +1,50 @@
+.card{
+    padding: 2em 5em;
+    /* background-color: rgb(19, 165, 117); */
+    background-color: rgb(88, 134, 96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    border-radius: 2px;
+    border-style: groove;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.definition{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.definition-left{
+    font-weight: 500;
+}
+
+#img{
+    max-width: 10em;
+    max-height: 20em;
+}
+
+#img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.buttons{
+    margin-top: 2em;
+}
+
+.buttons :first-child{
+    margin-right: 2em;
+}
+
+.buttons :last-child{
+    background-color: rgb(191, 44, 44);
+}

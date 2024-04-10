@@ -1,0 +1,42 @@
+<ng-container *ngIf="pet">
+    <div class="card">
+        <div class="img-container">
+            <p id="img"><img src={{pet.imageUrl}} alt="img"></p>
+        </div>
+        <div class="container-left">
+            <div class="definition">
+                <p class="definition-left">Type of animal : </p>
+                <p>{{pet.animalType}}</p>
+            </div>
+            <div class="definition">
+                <p class="definition-left">Breed : </p>
+                <p>{{pet.breed}}</p>
+            </div>
+            <div class="definition">
+                <p class="definition-left">Name :</p>
+                <p>{{pet.name}}</p>
+            </div>
+            <div class="definition">
+                <p class="definition-left">Skin color : </p>
+                <p>{{pet.skin_color}}</p>
+            </div>
+            <div class="definition">
+                <p class="definition-left">Description : </p>
+                <p>{{pet.description}}</p>
+            </div>
+            <div class="definition">
+                <p class="definition-left">Contacts :</p>
+                <p>{{pet.contactInfo}}</p>
+            </div>
+            <div class="definition">
+                <p class="definition-left">Address of the owner : </p>
+                <p>{{pet.adress}}</p>
+            </div>
+            <div class="buttons">
+                <app-button [title] = 'editBtn'></app-button>
+                <app-button [title] = 'deleteBtn'></app-button>
+            </div>
+        </div>
+    </div>
+
+</ng-container>

@@ -1,18 +1,32 @@
 .content-container{
-    margin : 5em 6em
+    /* margin : 5em 6em; */
+    padding: 5em 6em;
+    min-height : 80%;
+    /* background-color: rgb(88, 134, 96); */
 }
 .card-container{
     display: flex;
+    justify-content: space-around;
     gap: 5em;
+}
+
+#heading{
+    text-align: center;
+    margin-bottom: 2em;
+    font-family: "Della Respira", serif;
 }
 
 .card{
     padding: 2em;
-    width: 50em;
+    width: 30em;
     height: 22em;
-    background-color: rgb(19, 165, 117);
+    background-color: rgb(88, 134, 96);
+
+    /* background-color: rgb(19, 165, 117); */
+    /* background-color: rgb(19, 165, 117); */
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     
     gap: 2em;
 }
@@ -20,7 +34,8 @@
 .container-left{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .definition{
@@ -34,8 +49,9 @@
 }
 
 #img-container{
-    max-width: 10em;
-    max-height: 20em;
+    width: 10em;
+    height: 15em;
+    margin-bottom: 1em;
 }
 
 #img-container img{
@@ -44,7 +60,7 @@
     height: auto;
 }
 
-.container-right:hover{
+.details{
     width: 30em;
     height: 25em;
 }

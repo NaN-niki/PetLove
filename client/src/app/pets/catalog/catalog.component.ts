@@ -10,15 +10,16 @@ import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.se
 })
 export class CatalogComponent implements OnInit {
   pets: IPet[] = []
+  detailsBtn : string = 'Details'
 
   constructor(private petService: PetService, private loaderService : GlobalLoaderService) { }
 
   ngOnInit(): void {
 
-    this.loaderService.title = 'Loading'
+    this.loaderService.showLoader('Loading')
     this.petService.getAllPets().subscribe( data => {
       this.pets = data
-      this.loaderService.title = null
+      this.loaderService.hideLoader()
     })
   }
 }

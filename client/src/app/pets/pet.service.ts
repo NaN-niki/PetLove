@@ -13,4 +13,5 @@ export class PetService {
   apiUrl : string = environment.apiUrl + '/pets'
 
   getAllPets = () => this.http.get<IPet[]>(this.apiUrl)
+  getOnePet = (petId: string) => this.http.get<IPet>(this.apiUrl + '/' + petId)
 }

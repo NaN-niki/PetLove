@@ -16,7 +16,7 @@
                     <p class="definition-left">Name :</p>
                     <p>{{pet.name}}</p>
                 </div>
-                <div class="definition">
+                <!-- <div class="definition">
                     <p class="definition-left">Skin color : </p>
                     <p>{{pet.skin_color}}</p>
                 </div>
@@ -31,12 +31,11 @@
                 <div class="definition">
                     <p class="definition-left">Address of the owner : </p>
                     <p>{{pet.adress}}</p>
-                </div>
+                </div> -->
             </div>
             <div class="container-right">
-                <a [routerLink]="['/pets', pet._id, '/details']">
-                    <p id="img-container"><img src={{pet.imageUrl}} alt="img"></p>
-                </a>
+                <p id="img-container"><img src={{pet.imageUrl}} alt="img"></p>
+                <app-button [title]="detailsBtn"  class="details" [routerLink]="[pet._id, 'details']"></app-button>
             </div>
         </div>
     </div>

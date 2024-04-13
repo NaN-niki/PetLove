@@ -1,13 +1,15 @@
 .card{
-    padding: 2em 5em;
+    padding: 5em;
     /* background-color: rgb(19, 165, 117); */
     background-color: rgb(88, 134, 96);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em;
     border-radius: 2px;
     border-style: groove;
+    width: 50em;
+    border: 2px solid black;
+    border-style: dotted;
 }
 
 .img-container{
@@ -19,7 +21,9 @@
 .definition{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1em;
+    width: 20em;
 }
 
 .definition-left{
@@ -27,8 +31,8 @@
 }
 
 #img{
-    max-width: 10em;
-    max-height: 20em;
+    width: 15em;
+    height: 20em;
 }
 
 #img img{
@@ -45,6 +49,6 @@
     margin-right: 2em;
 }
 
-.buttons :last-child{
+.deleteBtn{
     background-color: rgb(191, 44, 44);
 }

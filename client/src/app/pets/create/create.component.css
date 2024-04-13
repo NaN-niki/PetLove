@@ -1,3 +1,16 @@
+.wrapper {
+    /* margin : 5em 6em; */
+    margin: 0 auto;
+    min-height: 80%;
+}
+
+.card-container{
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    min-height: 50%;
+}
+
 .content-container{
     /* min-height : 40%; */
     display: flex;

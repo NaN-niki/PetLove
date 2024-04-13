@@ -32,9 +32,9 @@
                 <p class="definition-left">Address of the owner : </p>
                 <p>{{pet.address}}</p>
             </div>
-            <div class="buttons">
-                <app-button [title] = 'editBtn' [routerLink]="[pet._id, 'edit']"></app-button>
-                <app-button [title] = 'deleteBtn'></app-button>
+            <div class="buttons" *ngIf="owner">
+                <app-button [title] = 'editBtn' [routerLink]="['/pets', pet._id, 'edit']"></app-button>
+                <app-button [title] = 'deleteBtn' (click)="deleteHandler()"></app-button>
             </div>
         </div>
     </div>

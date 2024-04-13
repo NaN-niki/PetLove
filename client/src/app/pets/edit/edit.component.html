@@ -5,7 +5,7 @@
 
         <div class="input">
             <label for="animalTypeInput">Animal type :</label>
-            <input ngModel type="text" name="animalType" id="animalTypeInput" #animalTypeInput="ngModel" required [appMinCount]="3" placeholder="Dog">
+            <input [(ngModel)] = "pet!.animalType" type="text" name="animalType" id="animalTypeInput" #animalTypeInput="ngModel" required [appMinCount]="3" placeholder="Dog">
             <ng-container *ngIf="animalTypeInput.touched">
                 <div class="error" *ngIf="animalTypeInput.errors?.['required']">Animal type Required</div>
                 <div class="error" *ngIf="animalTypeInput.errors?.['minValueError']">Animal type must be at least 3 characters long.</div>
@@ -14,7 +14,7 @@
 
         <div class="input">
             <label for="breedInput">Breed :</label>
-            <input ngModel type="text" name="breed" id="breedInput" #breedInput="ngModel" required placeholder="Golden Retriever">
+            <input [(ngModel)] = "pet!.breed" type="text" name="breed" id="breedInput" #breedInput="ngModel" required placeholder="Golden Retriever">
             <ng-container *ngIf="breedInput.touched">
                 <div class="error" *ngIf="breedInput.errors?.['required']" >Breed Required</div>
             </ng-container>
@@ -22,7 +22,7 @@
 
         <div class="input">
             <label for="nameInput">Name :</label>
-            <input ngModel type="text" name="name" id="nameInput" #nameInput="ngModel" required [appMinCount]="3" placeholder="Jessy">
+            <input [(ngModel)] = "pet!.name" type="text" name="name" id="nameInput" #nameInput="ngModel" required [appMinCount]="3" placeholder="Jessy">
             <ng-container *ngIf="nameInput.touched">
                 <div class="error" *ngIf="nameInput.errors?.['required']" >Name Required</div>
                 <div class="error" *ngIf="nameInput.errors?.['minValueError']" >Name must be at least 3 characters long</div>
@@ -31,7 +31,7 @@
 
         <div class="input">
             <label for="skin_color">Skin color :</label>
-            <input ngModel type="text" name="skin_color" id="skin_color" #skin_color="ngModel" required placeholder="Grey">
+            <input [(ngModel)] = "pet!.skin_color" type="text" name="skin_color" id="skin_color" #skin_color="ngModel" required placeholder="Grey">
             <ng-container *ngIf="skin_color.touched">
                 <div class="error" *ngIf="skin_color.errors?.['required']" >Skin color Required</div>
             </ng-container>
@@ -40,7 +40,7 @@
 
         <div class="input">
             <label for="imageUrl">Image url :</label>
-            <input ngModel type="text" name="imageUrl" id="imageUrl" #imageUrl="ngModel" required appUrlValidate placeholder="http://">
+            <input [(ngModel)] = "pet!.imageUrl" type="text" name="imageUrl" id="imageUrl" #imageUrl="ngModel" required appUrlValidate placeholder="http://">
             <ng-container *ngIf="imageUrl.touched">
                 <div class="error" *ngIf="imageUrl.errors?.['required']" >Image url Required</div>
                 <div class="error" *ngIf="imageUrl.errors?.['urlError']" >{{imageUrl.errors?.['urlError']}}</div>
@@ -49,7 +49,7 @@
 
         <div class="input">
             <label for="descriptionInput">Description :</label>
-            <input ngModel type="text" name="description" id="descriptionInput" #descriptionInput="ngModel" required [appMinCount]="10" placeholder="The sweetest pet I...">
+            <input [(ngModel)] = "pet!.description" type="text" name="description" id="descriptionInput" #descriptionInput="ngModel" required [appMinCount]="10" placeholder="The sweetest pet I...">
             <ng-container *ngIf="descriptionInput.touched">
                 <div class="error" *ngIf="descriptionInput.errors?.['required']" >Description Required</div>
                 <div class="error" *ngIf="descriptionInput.errors?.['minValueError']" >  {{descriptionInput.errors?.['minValueError']}} </div>
@@ -58,7 +58,7 @@
 
         <div class="input">
             <label for="contactInfoInput">Contact info :</label>
-            <input ngModel type="text" name="contactInfo" id="contactInfoInput" #contactInfoInput="ngModel" required appContact placeholder="+359">
+            <input [(ngModel)] = "pet!.contactInfo" type="text" name="contactInfo" id="contactInfoInput" #contactInfoInput="ngModel" required appContact placeholder="+359">
             <ng-container *ngIf="contactInfoInput.touched">
                 <div class="error" *ngIf="contactInfoInput.errors?.['required']" >Contact info Required</div>
                 <div class="error" *ngIf="contactInfoInput.errors?.['contactError']" > {{contactInfoInput.errors?.['contactError']}}</div>
@@ -67,7 +67,7 @@
 
         <div class="input">
             <label for="addressInput">Address :</label>
-            <input ngModel type="text" name="address" id="addressInput" #addressInput="ngModel" required placeholder="ST.Moritz">
+            <input [(ngModel)] = "pet!.address" type="text" name="address" id="addressInput" #addressInput="ngModel" required placeholder="ST.Moritz">
             <ng-container *ngIf="addressInput.touched">
                 <div class="error" *ngIf="addressInput.errors?.['required']" >Address Required</div>
             </ng-container>

@@ -41,3 +41,17 @@
     font-style: none;
     text-decoration: none;
 }
+
+.error{
+    color: red;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+/* *:has(+ .error){
+    border-color: red;
+} */
+
+/* input.ng-valid{
+    border: 2px solid rgb(51, 218, 51);
+} */

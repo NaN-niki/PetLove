@@ -35,7 +35,7 @@ petController.post('/create', hasUser(), async (req, res) => {
             imageUrl: body.imageUrl,
             description: body.description,
             contactInfo: body.contactInfo,
-            adress: body.adress,
+            address: body.address,
             createdAt: new Date(),
             owner: req.user._id
         }

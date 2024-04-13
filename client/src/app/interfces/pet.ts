@@ -7,7 +7,7 @@ export interface IPet{
     imageUrl: any,
     description: string,
     contactInfo: string,
-    adress: string,
+    address: string,
     bought: boolean,
     owner: string,
 }

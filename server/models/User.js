@@ -9,8 +9,8 @@ const userSchema = new Schema({
             message: 'Username must be at least 6 characters long and must include at least one digit'
         }, unique: true
     },
-    firstName: { type: String, required: true, minLength: [2, 'Username must be at least 2 symbols'] },
-    lastName: { type: String, required: true, minLength: [2, 'Username must be at least 2 symbols'] },
+    firstName: { type: String, required: true, minLength: [2, 'First name must be at least 2 symbols'] },
+    lastName: { type: String, required: true, minLength: [2, 'Last name must be at least 2 symbols'] },
     email: { type: String, required: true },
     password: { type: String, required: true },
     adoptedPet: { type: [Types.ObjectId], required: true, default: [], ref: 'Pet'}

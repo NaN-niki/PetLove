@@ -1,0 +1,22 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    height: 80%;
+}
+
+.wrapper p{
+    font-size: 20px;
+}
+
+#link{
+    text-decoration: none;
+    color: rgb(97, 170, 97);
+}
+
+#link:hover{
+    text-decoration: none;
+    color: black;
+}

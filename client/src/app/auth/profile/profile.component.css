@@ -1,0 +1,42 @@
+.wrapper {
+    padding : 10em;
+    min-height: 80%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.card{
+    margin: 0 auto;
+    padding: 5em;
+    /* background-color: rgb(19, 165, 117); */
+    background-color: rgb(88, 134, 96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+    border-style: groove;
+    width: 50em;
+    border: 2px solid black;
+    border-style: dotted;
+}
+
+.img-container p{
+    padding-bottom: 2em;
+}
+
+.definition{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 20em;
+}
+
+.definition-left{
+    font-weight: 500;
+}

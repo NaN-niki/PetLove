@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PetService {
-
+  
   constructor(private http : HttpClient) { }
 
   getAllPets = () => this.http.get<IPet[]>('/api/pets')
@@ -19,4 +19,5 @@ export class PetService {
   this.http.put(`/api/pets/${id}`, {
     animalType, breed, name, skin_color, imageUrl, description, contactInfo, address
   })
+  deletePet = (petId : string) => this.http.delete(`/api/pets/${petId}`)
 }

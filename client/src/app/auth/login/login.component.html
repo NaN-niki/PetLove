@@ -26,8 +26,8 @@
             <app-button [title]="submitBtn"></app-button>
             <p>If you already have an account go to <a routerLink="/auth/register" id="link">Register</a></p>
         </div>
-        <p class="notification error-message">{{apiError?.message}}</p>
     </form>
+    <p class="notification error-message">{{apiError?.message}}</p>
 </div>
 
 {{ usernameInput.errors|json}}

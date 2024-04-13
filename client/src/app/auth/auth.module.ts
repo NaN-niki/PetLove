@@ -8,13 +8,15 @@ import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    LogoutComponent
+    LogoutComponent,
+    EditProfileComponent
   ],
   imports: [
     CommonModule,

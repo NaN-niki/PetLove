@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { PetsModule } from './pets/pets.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SharedModule, 
     PetsModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

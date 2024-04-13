@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 import { CardComponent } from './details/card/card.component';
 import { SharedModule } from '../shared/shared.module';
+import { CreateComponent } from './create/create.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,12 +15,14 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     CatalogComponent,
     DetailsComponent,
-    CardComponent
+    CardComponent,
+    CreateComponent
   ],
   imports: [
     CommonModule,
     PetsRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [
     CatalogComponent

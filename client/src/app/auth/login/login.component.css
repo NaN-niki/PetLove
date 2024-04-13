@@ -1,5 +1,5 @@
 .content-container{
-    min-height : 40%;
+    /* min-height : 40%; */
     display: flex;
     justify-content: center;
 }
@@ -13,6 +13,21 @@
     flex-direction: column;
     gap: 2em;
     border-radius: 20px;
+    height: 40em;
+    width: 45em;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.bottom-container{
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .heading{
@@ -30,4 +45,18 @@
     color: rgb(216, 216, 140);
     font-style: none;
     text-decoration: none;
+}
+
+.error{
+    color: red;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+*:has(+ .error){
+    border-color: red;
+}
+
+input.ng-valid{
+    border: 2px solid rgb(51, 218, 51);
 }

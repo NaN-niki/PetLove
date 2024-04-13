@@ -1,13 +1,32 @@
 <div class="content-container">
-    <div class="card-container">
+
+    <form #loginForm="ngForm" (ngSubmit)="loginHandler(loginForm)" class="card-container">
         <h1 class="heading">Login</h1>
-        <label for="username">Username :</label>
-        <input type="text" name="" id="username">
 
-        <label for="password">Password :</label>
-        <input type="text" name="" id="password">
+        <div class="input">
+            <label for="username">Username :</label>
+            <input ngModel type="text" name="usernameInput" id="usernameInput" #usernameInput="ngModel" required appUsername>
+            <ng-container *ngIf="usernameInput.touched">
+                <div class="error" *ngIf="usernameInput.errors?.['required']">Username Required</div>
+                <div class="error" *ngIf="usernameInput.errors?.['appUsernameError']">Username must be at least 6 characters long and contain at least 1 number</div>
+            </ng-container>
+        </div>
 
-        <app-button [title]="submitBtn"></app-button>
-        <p>If you already have an account go to <a routerLink="/auth/register" id="link">Register</a></p>
-    </div>
+        <div class="input">
+            <label for="password">Password :</label>
+            <input ngModel type="text" name="passwordInput" id="passwordInput" #passwordInput="ngModel" required [appMinCount] = '3'>
+            <ng-container *ngIf="passwordInput.touched">
+                <div class="error" *ngIf="passwordInput.errors?.['required']" >Password Required</div>
+                <div class="error" *ngIf="passwordInput.errors?.['minValueError']" >{{passwordInput.errors?.['minValueError']}}</div>
+            </ng-container>
+        </div>
+
+
+        <div class="bottom-container">
+            <app-button [title]="submitBtn"></app-button>
+            <p>If you already have an account go to <a routerLink="/auth/register" id="link">Register</a></p>
+        </div>
+    </form>
 </div>
+
+{{ usernameInput.errors|json}}

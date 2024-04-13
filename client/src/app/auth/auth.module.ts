@@ -3,21 +3,25 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AuthRoutingModule } from './auth-routing.module';
-import { ButtonComponent } from '../shared/button/button.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
-
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { usernameValidatorFn } from '../shared/validators/usernameValidatorFn';
 
 @NgModule({
   declarations: [
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

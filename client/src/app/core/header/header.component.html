@@ -13,26 +13,36 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/pets">All pets</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/auth/login">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/pets/create">Create pet</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/auth/register">Register</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" routerLink="/" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Username
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" routerLink="/auth/profile">Profile</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" routerLink="#">Logout</a>
-                </div>
-            </li>
+
+            <ng-container *ngIf="!isLoggedIn">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/auth/login">Login</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/auth/register">Register</a>
+                </li>
+            </ng-container>
+
+            <ng-container *ngIf="isLoggedIn">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/pets/create">Create pet</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle profile" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{firstName}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/auth/profile">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLink="/auth/logout">Logout</a>
+                    </div>
+                </li>
+            </ng-container>
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

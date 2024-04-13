@@ -1,4 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.notification {
+    position: fixed;
+    z-index: 10;
+    /* right: 8%; */
+    top: 190px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-decoration: underline;
+    /* box-shadow: 0 5px 10px rgb(204, 204, 204); */
+}
+
+.error-message{
+    color: red;
+    text-decoration: none;
+}
+
+.profile{
+    cursor: pointer;
+}

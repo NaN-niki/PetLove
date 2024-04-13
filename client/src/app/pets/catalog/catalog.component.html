@@ -16,6 +16,10 @@
                     <p class="definition-left">Name :</p>
                     <p>{{pet.name}}</p>
                 </div>
+                <div class="definition">
+                    <p class="definition-left">Description :</p>
+                    <p>{{pet.description | shorten: 5}}</p>
+                </div>
             </div>
             <div class="container-right">
                 <p id="img-container"><img src={{pet.imageUrl}} alt="img"></p>

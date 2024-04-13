@@ -6,6 +6,7 @@ import { UsernameDirective } from './validators/username.directive';
 import { MinCountDirective } from './validators/min-count.directive';
 import { UrlValidateDirective } from './validators/url-validate.directive';
 import { ContactDirective } from './validators/contact.directive';
+import { ShortenPipe } from './shorten.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ContactDirective } from './validators/contact.directive';
     UsernameDirective,
     MinCountDirective,
     UrlValidateDirective,
-    ContactDirective
+    ContactDirective,
+    ShortenPipe
   ],
   imports: [
     CommonModule
@@ -26,7 +28,8 @@ import { ContactDirective } from './validators/contact.directive';
     UsernameDirective,
     MinCountDirective,
     UrlValidateDirective,
-    ContactDirective
+    ContactDirective,
+    ShortenPipe
   ]
 })
 export class SharedModule { }

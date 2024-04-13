@@ -20,7 +20,7 @@ async function editPet(petId, pet) {
     editetPet.imageUrl = pet.imageUrl
     editetPet.description = pet.description
     editetPet.contactInfo = pet.contactInfo
-    editetPet.adress = pet.adress
+    editetPet.address = pet.address
 
     return editetPet.save()
 }

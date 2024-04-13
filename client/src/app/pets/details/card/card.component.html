@@ -30,10 +30,10 @@
             </div>
             <div class="definition">
                 <p class="definition-left">Address of the owner : </p>
-                <p>{{pet.adress}}</p>
+                <p>{{pet.address}}</p>
             </div>
             <div class="buttons">
-                <app-button [title] = 'editBtn'></app-button>
+                <app-button [title] = 'editBtn' [routerLink]="[pet._id, 'edit']"></app-button>
                 <app-button [title] = 'deleteBtn'></app-button>
             </div>
         </div>

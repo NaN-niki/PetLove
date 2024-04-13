@@ -8,6 +8,7 @@ import { CardComponent } from './details/card/card.component';
 import { SharedModule } from '../shared/shared.module';
 import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
 
 
 
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     CatalogComponent,
     DetailsComponent,
     CardComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,

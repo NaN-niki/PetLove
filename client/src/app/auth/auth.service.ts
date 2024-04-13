@@ -52,4 +52,11 @@ export class AuthService {
       this.user$$.next(user)
     }))
   }
+
+  editProfileInfo(firstName: string, lastName: string, email: string,username: string) {
+    return this.http.put<IUser>('/api/auth/profile/edit', { firstName, lastName, email, username })
+    .pipe(tap(user => {
+      this.user$$.next(user)
+    }))
+  }
 }

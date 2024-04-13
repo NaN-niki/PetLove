@@ -2,6 +2,7 @@
     <form class="card-container" (ngSubmit)="registerHandler()" [formGroup]="registerForm">
         <h1 class="heading">Register</h1>
 
+        <p class="notification error-message">{{apiError?.message}}</p>
         <div class="fields">
             <label for="username">Username :</label>
             <input type="text" name="username" id="username" formControlName="username">
@@ -58,9 +59,6 @@
                 <label for="rePass">Confirm password :</label>
                 <input type="text" name="rePass" id="rePass" formControlName="rePass">
                 <div class="error" *ngIf="registerForm.get('pass')?.get('rePass')?.touched">
-                    <!-- <div *ngIf="registerForm.get('pass')?.get('rePass')?.errors?.['required']">Confirm Password is required</div>
-                    <div *ngIf="registerForm.get('pass')?.get('rePass')?.errors?.['minlength']?.requiredLength">Minimal length is
-                        {{registerForm.get('pass')?.get('rePass')?.errors?.['minlength'].requiredLength}} digits</div> -->
                     <div *ngIf="registerForm.get('pass')?.errors?.['sameValueGroupValidator'] ">Passwords should match</div>
                 </div>
             </div>

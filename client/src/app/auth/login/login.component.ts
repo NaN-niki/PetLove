@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { ErrorService } from 'src/app/error.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent {
   @Input() submitBtn: string = 'Submit'
-  constructor(private activatedRoute: ActivatedRoute){}
+  get apiError(){
+    return this.errorService.apiError
+  }
+
+  constructor(private activatedRoute: ActivatedRoute, private authService : AuthService, private router : Router, private errorService : ErrorService){}
 
   loginHandler(form: NgForm){
     if(form.invalid){return}
@@ -17,19 +23,15 @@ export class LoginComponent {
     const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/' // ako imash zakachen queryParams koito da se kazva 'returnUrl'
 
     const { username,  password } = form.value
-    // this.authService.login( username!, password!).subscribe({
-    //   next : (user) => {
-    //     this.store.dispatch(loadUsers())
-    //     this.router.navigate([returnUrl])
-    //   },
-    //   error : (err) => {
-    //     //console.log(err.message)
-    //   }
-    // })
+    this.authService.login( username!, password!).subscribe({
+      next : (user) => {
+        this.router.navigate([returnUrl])
+      }
+    })
 
     form.reset()
   }
   ngOnDestroy(): void {
-    // this.errorService.apiError$$.next(null)
+    this.errorService.apiError$$.next(null)
   }
 }

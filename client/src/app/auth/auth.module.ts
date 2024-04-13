@@ -7,13 +7,14 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { usernameValidatorFn } from '../shared/validators/usernameValidatorFn';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,

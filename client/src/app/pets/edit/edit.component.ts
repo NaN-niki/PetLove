@@ -21,13 +21,14 @@ export class EditComponent {
   }
 
   editHandler(form: NgForm) {
-    if (form.invalid) { return }
 
     const { animalType, breed, name, skin_color, imageUrl, description, contactInfo, address } = form.value
 
+    console.log( animalType, breed, name, skin_color, imageUrl, description, contactInfo, address)
+
     this.petService.editPet(animalType, breed, name, skin_color, imageUrl, description, contactInfo, address, this.id).subscribe({
       next: () => {
-        this.router.navigate([`/${this.id}/details`])
+        this.router.navigate([`/pets/${this.id}/details`])
       },
       error: () => {
         console.log()

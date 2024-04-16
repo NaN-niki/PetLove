@@ -21,6 +21,7 @@ export class CardComponent {
   }
 
   deleteHandler() {
+    console.log(this.pet._id)
     if(window.confirm('Are you sure you want to delete this?')){   /// TOAST
       this.petService.deletePet(this.pet._id).subscribe({
         next: () => {

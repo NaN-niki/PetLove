@@ -25,7 +25,7 @@ async function editPet(petId, pet) {
     return editetPet.save()
 }
 async function deletePet(petId) {
-    return Pet.findOneAndDelete(petId)
+    return Pet.findOneAndDelete({_id : petId})
 }
 
 async function getPetByUser(userId) {

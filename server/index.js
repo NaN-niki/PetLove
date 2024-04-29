@@ -11,8 +11,8 @@ const cookieSecret = 'SoftUni';
 
 const app = express()
 
-const connectionString = 'mongodb://localhost:27017/pets'
-
+const connectionString = 'mongodb+srv://nikssi:993qSb7EKKA8XB5g@cluster0.x3iobnc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+// 993qSb7EKKA8XB5g
 start()
 async function start() {
 

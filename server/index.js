@@ -38,7 +38,7 @@ async function run() {
     app.use(express.json())
     app.use(cors(
         {
-            origin: 'http://localhost:4200',
+            origin: '*',
             credentials: true
         }
     ))

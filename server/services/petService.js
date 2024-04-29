@@ -12,6 +12,7 @@ async function getOnePet(petId) {
 }
 async function editPet(petId, pet) {
     const editetPet = await Pet.findById(petId)
+    console.log(editetPet);
 
     editetPet.animalType = pet.animalType
     editetPet.breed = pet.breed

@@ -6,6 +6,7 @@ const session = require('./middlewares/session')
 const cookieParser = require('cookie-parser');
 const petController = require('./controllers/petController')
 const authController = require('./controllers/authController')
+
 const cookieSecret = 'SoftUni';
 
 const app = express()

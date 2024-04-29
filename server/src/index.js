@@ -81,3 +81,13 @@ async function start() {
 
     app.listen(3000)
 }
+
+// { 
+//     "version" : 2,
+//     "builds": [
+//       { "src": "*.js", "use": "@vercel/node" }
+//     ],
+//     "routes": [
+//         { "src": "/(.*)", "dest": "/" }
+//       ]
+//   }

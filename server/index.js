@@ -37,7 +37,7 @@ async function start() {
     // ))
 
     app.use(cookieParser(cookieSecret))
-    app.use(cors())
+    // app.use(cors())
     app.use(trimBody())
     app.use(session())
     app.use('/pets', petController)

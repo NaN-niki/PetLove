@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const express = require('express')
-// const cors = require('cors')
-const cors = require('./middlewares/cors')
+const cors = require('cors')
 const trimBody = require('./middlewares/trimBody')
 const session = require('./middlewares/session')
 const cookieParser = require('cookie-parser');
@@ -9,13 +8,12 @@ const petController = require('./controllers/petController')
 const authController = require('./controllers/authController')
 const functions = require('firebase-functions')
 
-const cookieSecret = 'SoftUni';
+require('dotenv').config()
+
+const cookieSecret = process.env.COOKIE_SECRET;
+const connectionString = process.env.CONNECTION_STRING
 
 const app = express()
-// const app = require('./util/app')
-
-const connectionString = 'mongodb+srv://nikssi:993qSb7EKKA8XB5g@cluster0.x3iobnc.mongodb.net/pets?retryWrites=true&w=majority&appName=Cluster0'
-// 993qSb7EKKA8XB5g
 
 start()
 async function start() {
@@ -28,22 +26,21 @@ async function start() {
 
     app.use(express.json())
 
-    // app.use(cors(
-    //     {
-    //         // origin: 'https://pet-love-ft8x.vercel.app',
-    //         origin: '*',  // ne se supportva v tozi sluchai modula
-    //         credentials: true
-    //     }
-    // ))
+    app.use(cors(
+        {
+            // origin: 'https://pet-love-ft8x.vercel.app',
+            origin: 'http://localhost:4200',
+            credentials: true
+        }
+    ))
 
     app.use(cookieParser(cookieSecret))
-    // app.use(cors())
     app.use(trimBody())
     app.use(session())
     app.use('/pets', petController)
     app.use('/auth', authController)
 
-    app.listen(3000) 
+    app.listen(process.env.PORT)
 }
 
 // exports.api = functions.https.onRequest(start())
